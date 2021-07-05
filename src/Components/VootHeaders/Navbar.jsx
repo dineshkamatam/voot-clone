@@ -1,18 +1,19 @@
 import React from "react";
 import "./headers.css";
 import VootMenu from "./VootMenu";
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <div>
       <section id="vootHeaders">
         <article>
           <div className="vootLogo">
-            <a href="">
-              <img src="Voot-Logo.svg" alt="" />
+            <a href="/">
+              <img src="Voot-Logo.svg" alt="logo" />
             </a>
+            <a href="/">Upgrade</a>
           </div>
           <div className="vootMenu">
-            <VootMenu />
+            <VootMenu users={props.users} />
           </div>
         </article>
       </section>

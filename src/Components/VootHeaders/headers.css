@@ -1,8 +1,8 @@
 #vootHeaders {
   width: 100%;
   height: 60px;
-  background-color: #0d0620;
-  position: fixed;
+  background: hsl(256, 68%, 7%);
+  /* position: fixed; */
 }
 
 #vootHeaders article {
@@ -12,6 +12,9 @@
   height: 60px;
   align-items: center;
   color: #fff;
+  opacity: 1;
+  z-index: 1000;
+  position: relative;
 }
 
 #vootHeaders article .vootLogo {
@@ -31,6 +34,20 @@
   vertical-align: baseline;
 }
 
+.vootLogo a:first-child {
+  border-right: 2px solid #29d4b6;
+  padding-right: 20px;
+}
+
+.vootLogo a:last-child {
+  color: #000;
+  text-decoration: none;
+  background-color: #29d4b6;
+  margin-left: 25px;
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 2px;
+}
 #vootHeaders ul {
   display: flex;
   list-style: none;
@@ -39,9 +56,61 @@
 #vootHeaders ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 17px 20px;
+  opacity: 0.6;
+  text-transform: capitalize;
 }
-
 #vootMenuBlock {
   display: flex;
+}
+
+.authMenu li a {
+  padding: 17px 10px !important;
+  opacity: 1 !important;
+}
+
+#vootHeaders li a.active {
+  border-top: 2px solid #7f0dff;
+  opacity: 1;
+}
+
+#vootHeaders .dropdown {
+  background: #2a2440;
+  width: 250px;
+  height: auto;
+  position: absolute;
+  right: 52px;
+  top: 58px;
+  border-radius: 3px;
+  display: none;
+  z-index: 1;
+}
+#vootHeaders .dropdown ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+#vootHeaders .dropdown ul li a {
+  opacity: 1;
+  width: 85%;
+  padding: 14px 20px;
+  display: block;
+  border-bottom: 1px solid #ffffff78;
+  margin: 0px 14px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+#vootHeaders .dropdown ul li:last-child a {
+  border: none;
+}
+
+.arrow-up {
+  border-bottom: 13px solid #2a2440;
+  position: absolute;
+  top: -13px;
+  right: 19px;
+  z-index: 1111;
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
 }
